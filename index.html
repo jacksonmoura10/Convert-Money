@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a responsividade da página para dispositivos móveis -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Pré-conecta ao domínio do Google Fonts para carregar fontes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Pré-conecta ao domínio do Google Fonts para carregar fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"> <!-- Carrega a fonte Roboto do Google Fonts -->
+    <link rel="stylesheet" href="style.css"> <!-- Vincula o arquivo CSS para estilização da página -->
+
+    <title>Convert-Money</title> <!-- Define o título da página, que aparece na aba do navegador -->
+</head>
+
+<body>
+    <img class="logo" src="assets/jackson.png" alt="logo gif"> <!-- Exibe a logo da aplicação -->
+    <main> <!-- Define o conteúdo principal da página -->
+        <label> <!-- Início de um rótulo para o select de moeda de origem -->
+            Converter <b>de</b> <!-- Texto que descreve a ação "de" -->
+            <select class="currency-from"> <!-- Select para escolher a moeda de origem -->
+                <option value="real">R$ Real Brasileiro</option> <!-- Opção para selecionar Real -->
+                <option value="dolar">US$ Dolar americano</option> <!-- Opção para selecionar Dólar -->
+                <option value="euro">€ Euro</option> <!-- Opção para selecionar Euro -->
+                <option value="bitcoin">₿ Biticoin</option> <!-- Opção para selecionar Bitcoin -->
+                <option value="ethereum">Ξ Ethereum</option> <!-- Opção para selecionar Ethereum -->
+            </select>
+        </label>
+
+        <label> <!-- Início de um rótulo para o select de moeda de destino -->
+            Convert <b>para</b> <!-- Texto que descreve a ação "para" -->
+            <select class="currency-select"> <!-- Select para escolher a moeda de destino -->
+                <option value="dolar">US$ Dólar americano</option> <!-- Opção para selecionar Dólar -->
+                <option value="euro">€ Euro</option> <!-- Opção para selecionar Euro -->
+                <option value="bitcoin">₿ Bitcoin</option> <!-- Opção para selecionar Bitcoin -->
+                <option value="ethereum">Ξ Ethereum</option> <!-- Opção para selecionar Ethereum -->
+            </select>
+        </label>
+
+        <label> <!-- Rótulo para o campo de entrada do valor -->
+            Valor
+            <input class="input-currency" placeholder="R$ 10.000,00"> <!-- Campo de entrada para o valor a ser convertido -->
+        </label>
+
+        <button class="convert-button">Converter</button> <!-- Botão para acionar a conversão -->
+        
+        <section> <!-- Início da seção que mostra as informações da conversão -->
+            <div class="currency-box"> <!-- Caixa que exibe informações sobre a moeda de origem -->
+                <img class="currency-from-img" src="assets/real.png" alt="real"> <!-- Imagem da moeda de origem (bandeira) -->
+                <p class="currency" id="currency-name-from">Real</p> <!-- Nome da moeda de origem -->
+                <p class="currency-value-to-convert">R$ 0.00</p> <!-- Valor da moeda de origem a ser convertido -->
+            </div>
+            <div> <!-- Div para a seta entre as moedas -->
+                <img class="arrow-img" src="assets/seta.png" alt="seta"> <!-- Imagem da seta -->
+            </div>
+            <div class="currency-box"> <!-- Caixa que exibe informações sobre a moeda de destino -->
+                <img class="currency-img" src="assets/usa.png" alt="dolar"> <!-- Imagem da moeda de destino (bandeira) -->
+                <p class="currency" id="currency-name-to">Dólar americano</p> <!-- Nome da moeda de destino -->
+                <p class="currency-value">US$ 0.00</p> <!-- Valor da moeda de destino após a conversão -->
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js"></script> <!-- Vincula o arquivo JavaScript para a lógica da conversão -->
+</body>
+
+</html>
+

@@ -1,0 +1,223 @@
+/* Estilos gerais para todos os elementos da página */
+* {
+    margin: 0;
+    /* Remove a margem padrão de todos os elementos */
+    padding: 0;
+    /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box;
+    /* Garante que padding e border não alterem o tamanho do elemento */
+    font-family: "Roboto", serif;
+    /* Define a fonte padrão para a página */
+    outline: none;
+    /* Remove o contorno de elementos ao serem selecionados (como inputs) */
+}
+
+/* Estilo para o corpo da página */
+body {
+    background-color: rgb(120, 10, 216);
+    /* Define a cor de fundo da página */
+}
+
+/* Estilo para a logo */
+.logo {
+    width: 100px;
+    /* Define a largura da logo */
+    display: block;
+    /* Define como bloco para ocupar toda a linha */
+    margin: 20px auto;
+    /* Adiciona margens automáticas para centralizar a logo */
+}
+
+/* Estilo para a área principal (onde o conteúdo da conversão fica) */
+main {
+    width: 375px;
+    /* Define a largura do conteúdo principal */
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do conteúdo */
+    border-radius: 20px;
+    /* Adiciona bordas arredondadas */
+    margin: 0 auto 40px;
+    /* Centraliza a área e adiciona margem inferior */
+    padding: 44px 24px 23px;
+    /* Adiciona preenchimento (padding) ao redor do conteúdo */
+}
+
+/* Estilo para os rótulos (labels) */
+label {
+    color: #777777;
+    /* Define a cor do texto dos rótulos */
+    font-weight: 400;
+    /* Define a espessura da fonte */
+    font-size: 14px;
+    /* Define o tamanho da fonte */
+}
+
+/* Estilo para os selects e inputs */
+select,
+input {
+    background: #ffffff;
+    /* Cor de fundo branca */
+    border: 1px solid #bbbbbb;
+    /* Borda cinza clara */
+    border-radius: 4px;
+    /* Bordas arredondadas */
+    height: 48px;
+    /* Define a altura dos campos */
+    width: 100%;
+    /* Faz os campos ocuparem 100% da largura disponível */
+    margin-bottom: 24px;
+    /* Adiciona uma margem inferior */
+    appearance: none;
+    /* Remove o estilo padrão do select no navegador */
+    padding-left: 18px;
+    /* Adiciona preenchimento à esquerda */
+    font-size: 16px;
+    /* Define o tamanho da fonte */
+    font-weight: 700;
+    /* Define a espessura da fonte */
+    color: #555555;
+    /* Cor da fonte */
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro (mão) ao passar sobre os campos */
+}
+
+/* Estilo para o botão */
+button {
+    background: #772fd3;
+    /* Cor de fundo roxa */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    width: 100%;
+    /* O botão ocupa 100% da largura disponível */
+    border: none;
+    /* Remove a borda padrão do botão */
+    height: 48px;
+    /* Define a altura do botão */
+    color: #ffffff;
+    /* Cor do texto do botão */
+    font-size: 18px;
+    /* Tamanho da fonte */
+    font-weight: 700;
+    /* Espessura da fonte */
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro (mão) ao passar sobre o botão */
+}
+
+/* Estilo para quando o botão é clicado (hover) */
+button:hover {
+    opacity: 0.8;
+    /* Deixa o botão um pouco mais transparente ao passar o mouse sobre ele */
+}
+
+/* Estilo para quando o botão é pressionado (active) */
+button:active {
+    opacity: 0.6;
+    /* Deixa o botão ainda mais transparente quando pressionado */
+}
+
+/* Estilo para a seção que exibe o valor convertido */
+section {
+    border: 1px solid #772fd3;
+    /* Borda roxa */
+    border-radius: 20px;
+    /* Bordas arredondadas */
+    margin-top: 36px;
+    /* Adiciona margem superior */
+    padding: 12px;
+    /* Adiciona preenchimento dentro da seção */
+    display: flex;
+    /* Define que a seção usa flexbox para organizar o conteúdo */
+    flex-direction: column;
+    /* Organiza os itens da seção na vertical */
+    align-items: center;
+    /* Centraliza os itens na horizontal */
+}
+
+/* Estilo para a seta entre as moedas */
+.arrow-img {
+    margin: 15px 0;
+    /* Adiciona margem superior e inferior para a seta */
+}
+
+/* Estilo para as caixas de moedas (de origem e destino) */
+.currency-box {
+    display: flex;
+    /* Define que a caixa de moeda usa flexbox */
+    flex-direction: column;
+    /* Organiza os itens da caixa na vertical */
+    align-items: center;
+    /* Centraliza os itens na horizontal */
+    gap: 15px;
+    /* Adiciona espaço entre os itens */
+}
+
+/* Estilo para os nomes das moedas */
+.currency {
+    color: #777777;
+    /* Cor do texto */
+    font-size: 14px;
+    /* Tamanho da fonte */
+}
+
+/* Estilo para os valores das moedas */
+.currency-value,
+.currency-value-to-convert {
+    color: #555555;
+    /* Cor do texto */
+    font-weight: 700;
+    /* Define a espessura da fonte */
+    font-size: 20px;
+    /* Tamanho da fonte */
+}
+
+/* Estilos de responsividade */
+
+@media (max-width: 768px) {
+    main {
+        width: 100%;
+        /* A largura do conteúdo principal ocupa 100% em telas menores */
+        padding: 20px;
+        /* Ajusta o padding para telas menores */
+    }
+
+    .logo {
+        width: 250px;
+        /* Reduz o tamanho da logo em telas menores */
+    }
+
+    button {
+        font-size: 16px;
+        /* Diminui o tamanho da fonte do botão em telas menores */
+    }
+
+    select,
+    input {
+        font-size: 14px;
+        /* Diminui o tamanho da fonte em selects e inputs para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 100%;
+        /* A largura do conteúdo principal ocupa 100% em telas pequenas */
+        padding: 10px;
+        /* Ajusta o padding para telas pequenas */
+    }
+
+    .logo {
+        width: 200px;
+        /* Reduz ainda mais o tamanho da logo em telas muito pequenas */
+    }
+
+    button {
+        font-size: 14px;
+        /* Ajusta o tamanho da fonte do botão em telas muito pequenas */
+    }
+
+    select,
+    input {
+        font-size: 12px;
+        /* Ajusta o tamanho da fonte em selects e inputs para telas muito pequenas */
+    }
+}
